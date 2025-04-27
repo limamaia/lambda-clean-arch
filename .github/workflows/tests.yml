@@ -1,0 +1,25 @@
+name: Run Tests on Pull Request
+
+on:
+  pull_request:
+    branches:
+      - initial-structure
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v2
+
+      - name: Instala Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instala dependências
+        run: npm install
+
+      - name: Roda testes
+        run: npm run test
