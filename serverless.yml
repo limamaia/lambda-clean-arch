@@ -1,0 +1,18 @@
+service: lambda-clean-arch
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+
+functions:
+  app:
+    handler: dist/src/lambda/lambda.handler
+    events:
+      - http:
+          path: hello
+          method: get
+
+plugins:
+  - serverless-offline

@@ -1,0 +1,29 @@
+{
+  "name": "lambda-clean-arch",
+  "version": "1.0.0",
+  "main": "src/lambda/lambda.ts",
+  "scripts": {
+    "dev": "tsc --build --clean && tsc && sls offline",
+    "test": "jest ./src/tests --verbose",
+    "build": "tsc --build --clean && tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.147",
+    "@types/jest": "^29.5.14",
+    "aws-lambda": "^1.0.7",
+    "jest": "^29.7.0",
+    "serverless": "^3.40.0",
+    "serverless-offline": "^13.3.3",
+    "serverless-plugin-typescript": "^2.1.5",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.149",
+    "aws-lambda": "^1.0.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

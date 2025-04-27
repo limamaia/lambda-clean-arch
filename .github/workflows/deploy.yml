@@ -1,0 +1,25 @@
+name: CD - Sem aws
+
+on:
+  push:
+    branches:
+      - main
+      - initial-structure
+  pull_request:
+    branches:
+      - main
+      - initial-structure
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: run build
+        run: echo "running ..."
+
+      - name: 'Deploy simbólico (não tenho aws para subir esse lambda)'
+        run: echo "Deploy executado com sucesso."
